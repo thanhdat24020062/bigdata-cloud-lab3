@@ -1,0 +1,4 @@
+
+# SSH private keys
+*.pem
+*:Zone.Identifier
