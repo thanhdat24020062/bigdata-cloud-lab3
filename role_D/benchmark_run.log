@@ -1,0 +1,30 @@
+WARNING: Using incubator modules: jdk.incubator.vector
+:: loading settings :: url = jar:file:/home/ubuntu/miniforge3/envs/lab3-py311/lib/python3.11/site-packages/pyspark/jars/ivy-2.5.3.jar!/org/apache/ivy/core/settings/ivysettings.xml
+Ivy Default Cache set to: /home/ubuntu/.ivy2.5.2/cache
+The jars for the packages stored in: /home/ubuntu/.ivy2.5.2/jars
+io.delta#delta-spark_2.13 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent-a5339d70-2228-41ba-aa5d-ad2c512f8c52;1.0
+	confs: [default]
+	found io.delta#delta-spark_2.13;4.0.1 in central
+	found io.delta#delta-storage;4.0.1 in central
+	found org.antlr#antlr4-runtime;4.13.1 in central
+:: resolution report :: resolve 210ms :: artifacts dl 7ms
+	:: modules in use:
+	io.delta#delta-spark_2.13;4.0.1 from central in [default]
+	io.delta#delta-storage;4.0.1 from central in [default]
+	org.antlr#antlr4-runtime;4.13.1 from central in [default]
+	---------------------------------------------------------------------
+	|                  |            modules            ||   artifacts   |
+	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+	---------------------------------------------------------------------
+	|      default     |   3   |   0   |   0   |   0   ||   3   |   0   |
+	---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent-a5339d70-2228-41ba-aa5d-ad2c512f8c52
+	confs: [default]
+	0 artifacts copied, 3 already retrieved (0kB/6ms)
+26/11/09 14:22:38 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+26/11/09 14:22:45 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+[Stage 0:>                                                          (0 + 2) / 2][Stage 2:>                                                          (0 + 2) / 2][Stage 2:=============================>                             (1 + 1) / 2]                                                                                [Stage 14:>                                                         (0 + 1) / 1][Stage 16:>                                                        (0 + 2) / 32][Stage 16:===>                                                     (2 + 2) / 32][Stage 16:=======>                                                 (4 + 2) / 32][Stage 16:========>                                                (5 + 2) / 32][Stage 16:==========>                                              (6 + 2) / 32][Stage 16:==============>                                          (8 + 2) / 32][Stage 16:================>                                        (9 + 2) / 32][Stage 16:=================>                                      (10 + 2) / 32][Stage 16:===================>                                    (11 + 2) / 32][Stage 16:=====================>                                  (12 + 2) / 32][Stage 16:======================>                                 (13 + 2) / 32][Stage 16:========================>                               (14 + 2) / 32][Stage 16:============================>                           (16 + 2) / 32][Stage 16:=============================>                          (17 + 2) / 32][Stage 16:=================================>                      (19 + 2) / 32][Stage 16:====================================>                   (21 + 2) / 32][Stage 16:======================================>                 (22 + 2) / 32][Stage 16:========================================>               (23 + 2) / 32][Stage 16:==========================================>             (24 + 2) / 32][Stage 16:===========================================>            (25 + 2) / 32][Stage 16:=============================================>          (26 + 2) / 32][Stage 16:===============================================>        (27 + 2) / 32][Stage 16:=================================================>      (28 + 2) / 32][Stage 16:==================================================>     (29 + 2) / 32][Stage 16:====================================================>   (30 + 2) / 32]                                                                                [Stage 22:>                                                         (0 + 2) / 5][Stage 22:===========>                                              (1 + 2) / 5][Stage 22:=======================>                                  (2 + 2) / 5][Stage 22:==================================>                       (3 + 2) / 5][Stage 22:==============================================>           (4 + 1) / 5]                                                                                benchmark: COMPLETE; evidence: evidence
