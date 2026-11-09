@@ -1,0 +1,7 @@
+{
+  "run_id": "b751fde9-e33f-4235-800e-f65346997099",
+  "job": "benchmark",
+  "status": "ABORT",
+  "error_type": "NotImplementedError",
+  "message": "TODO 4: benchmark_query"
+}
