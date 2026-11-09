@@ -1,0 +1,126 @@
+{
+  "partition_tasks": [
+    {
+      "host": "ip-172-31-26-228",
+      "pid": 416906,
+      "partition": 0
+    },
+    {
+      "host": "ip-172-31-26-228",
+      "pid": 416905,
+      "partition": 1
+    },
+    {
+      "host": "ip-172-31-26-228",
+      "pid": 416905,
+      "partition": 2
+    },
+    {
+      "host": "ip-172-31-26-228",
+      "pid": 416906,
+      "partition": 3
+    },
+    {
+      "host": "ip-172-31-26-228",
+      "pid": 416906,
+      "partition": 4
+    },
+    {
+      "host": "ip-172-31-26-228",
+      "pid": 416905,
+      "partition": 5
+    },
+    {
+      "host": "ip-172-31-26-228",
+      "pid": 416906,
+      "partition": 6
+    },
+    {
+      "host": "ip-172-31-26-228",
+      "pid": 416905,
+      "partition": 7
+    },
+    {
+      "host": "ip-172-31-26-228",
+      "pid": 416905,
+      "partition": 8
+    },
+    {
+      "host": "ip-172-31-26-228",
+      "pid": 416906,
+      "partition": 9
+    },
+    {
+      "host": "ip-172-31-26-228",
+      "pid": 416906,
+      "partition": 10
+    },
+    {
+      "host": "ip-172-31-26-228",
+      "pid": 416905,
+      "partition": 11
+    },
+    {
+      "host": "ip-172-31-26-228",
+      "pid": 416906,
+      "partition": 12
+    },
+    {
+      "host": "ip-172-31-26-228",
+      "pid": 416905,
+      "partition": 13
+    },
+    {
+      "host": "ip-172-31-26-228",
+      "pid": 416906,
+      "partition": 14
+    },
+    {
+      "host": "ip-172-31-26-228",
+      "pid": 416905,
+      "partition": 15
+    },
+    {
+      "host": "ip-172-31-26-228",
+      "pid": 416906,
+      "partition": 16
+    },
+    {
+      "host": "ip-172-31-26-228",
+      "pid": 416905,
+      "partition": 17
+    },
+    {
+      "host": "ip-172-31-26-228",
+      "pid": 416906,
+      "partition": 18
+    },
+    {
+      "host": "ip-172-31-26-228",
+      "pid": 416905,
+      "partition": 19
+    },
+    {
+      "host": "ip-172-31-26-228",
+      "pid": 416906,
+      "partition": 20
+    },
+    {
+      "host": "ip-172-31-26-228",
+      "pid": 416905,
+      "partition": 21
+    },
+    {
+      "host": "ip-172-31-26-228",
+      "pid": 416906,
+      "partition": 22
+    },
+    {
+      "host": "ip-172-31-26-228",
+      "pid": 416905,
+      "partition": 23
+    }
+  ],
+  "distinct_hosts": 1,
+  "interpretation": "Distinct hosts demonstrate placements, not distinct physical servers. Keep Spark UI/event-log evidence too."
+}
