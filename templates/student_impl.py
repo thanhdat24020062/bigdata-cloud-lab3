@@ -68,4 +68,41 @@ def benchmark_query(df):
 
 def validate_release_binding(draft, expected):
     """TODO 5 (T5, role E). Signature restored to the starter's (draft, expected)."""
-    raise NotImplementedError('TODO 5: validate_release_binding')
+    if not draft:
+        return False
+
+    author = draft.get("author")
+    reviewer = draft.get("reviewer")
+    steward = draft.get("steward")
+    
+    # R04: Missing steward rejects
+    if not steward or str(steward).strip() == "":
+        print("[Gate Refusal] R04: Steward identity is missing.")
+        return False
+
+    # R03: Self-review rejects (author == reviewer)
+    if not author or not reviewer or author == reviewer:
+        print("[Gate Refusal] R03: Self-review detected (Author equals Reviewer).")
+        return False
+
+    snapshot_binding = draft.get("snapshot_binding", {})
+    silver_version = snapshot_binding.get("silver_version")
+    gold_source_silver_version = snapshot_binding.get("gold_source_silver_version")
+
+    # R02: Mismatched Gold-source / Silver version rejects
+    if silver_version is None or gold_source_silver_version is None or silver_version != gold_source_silver_version:
+        print("[Gate Refusal] R02: Version mismatch between Silver and Gold source.")
+        return False
+
+    # Xử lý lấy mã hash kỳ vọng (từ expected) và thực tế (từ draft)
+    expected_hash = expected.get("code_hash") if isinstance(expected, dict) else expected
+    actual_hash = draft.get("code_hash")
+
+    # R05: Wrong generating-code hash rejects
+    if not expected_hash or not actual_hash or expected_hash != actual_hash:
+        print("[Gate Refusal] R05: Generating-code hash mismatch.")
+        return False
+
+    # R01: Valid binding pass
+    print("[Gate Pass] R01: Release binding validated successfully.")
+    return True
