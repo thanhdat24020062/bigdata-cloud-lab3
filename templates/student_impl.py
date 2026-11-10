@@ -53,8 +53,17 @@ def merge_silver(spark, silver_path, winners_df):
 
 
 def benchmark_query(df):
-    """TODO 4 (T4, role D)."""
-    raise NotImplementedError('TODO 4: benchmark_query')
+    """T4 (role D). Same query on both layouts: event_date = DATE '2026-02-06',
+    GROUP BY site. No collect(); replica_id is not used in the GROUP BY."""
+    return (
+        df.filter(F.col("event_date") == F.to_date(F.lit("2026-02-06")))
+          .groupBy("site")
+          .agg(
+              F.count("*").cast("bigint").alias("n_observations"),
+              F.sum("temperature_c").cast(DecimalType(18, 2)).alias("sum_temperature_c"),
+              F.sum(F.when(F.col("is_late"), 1).otherwise(0)).cast("bigint").alias("n_late"),
+          )
+    )
 
 
 def validate_release_binding(draft, expected):
