@@ -1,0 +1,20 @@
+{
+  "group_id": "g01",
+  "run_label": "attempt01",
+  "handoff_kind": "course_fallback_not_student_approval",
+  "handoff_logical_sha256": "c50f8252bfb91890975d26b16fe1d2b32f0e283a58e46bd16260b4a3cca0bf0d",
+  "trusted_manifest_sha256": "3cdfc84b26d290100b39ce65d4ff7cb22839f4021b9caf26897c8a4ff68091a2",
+  "bronze_path": "/tmp/lab3-lakehouse/g01/attempt01/tables/bronze",
+  "silver_path": "/tmp/lab3-lakehouse/g01/attempt01/tables/silver",
+  "gold_path": "/tmp/lab3-lakehouse/g01/attempt01/tables/gold",
+  "bronze_initial_version": 0,
+  "silver_initial_version": 0,
+  "gold_initial_version": 0,
+  "silver_final_version": 0,
+  "gold_final_version": 0,
+  "gold_source_silver_version": 0,
+  "initial_implementation_sha256": "dcf0908ef422a0b7ad6d8d724fe8b76b2843e594f64676122f76d3d51b5a05fe",
+  "run_ids": {
+    "bootstrap": "cd728964-dfbb-4ef5-8e21-a24afffce993"
+  }
+}
