@@ -1,0 +1,11 @@
+{
+  "run_id": "3051ad70-c167-4637-9431-1ab95991ad83",
+  "job": "release",
+  "status": "COMPLETE",
+  "input_manifest_sha256": "3cdfc84b26d290100b39ce65d4ff7cb22839f4021b9caf26897c8a4ff68091a2",
+  "implementation_sha256": "98d36b0b4438da557d5ec00feeed9be2d99bb988edeb4f3df3b308cdfecc287e",
+  "scaffold_sha256": "23670398c61dbc1c54ceb02909a6deccf3aa673a1e852262367e61cded7fbce7",
+  "outputs": [
+    "evidence_e01/release_candidate"
+  ]
+}

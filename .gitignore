@@ -2,3 +2,4 @@
 # SSH private keys
 *.pem
 *:Zone.Identifier
+__pycache__/

@@ -67,5 +67,49 @@ def benchmark_query(df):
 
 
 def validate_release_binding(draft, expected):
-    """TODO 5 (T5, role E). Signature restored to the starter's (draft, expected)."""
-    raise NotImplementedError('TODO 5: validate_release_binding')
+    """T5 (role E): return (passed, reasons). Never raises on missing keys."""
+    reasons = []
+    if not isinstance(draft, dict) or not draft:
+        return False, ["Draft is empty or not an object."]
+    if not isinstance(expected, dict) or not expected:
+        return False, ["Expected binding is missing."]
+
+    def clean(v):
+        return str(v).strip() if v is not None else ""
+
+    author, reviewer, steward = (clean(draft.get(k)) for k in ("author", "reviewer", "steward"))
+
+    # R04: steward missing
+    if not steward:
+        reasons.append("R04: steward identity is missing.")
+    # R03: reviewer missing or same as author
+    if not author or not reviewer:
+        reasons.append("R03: author or reviewer is missing.")
+    elif author.casefold() == reviewer.casefold():
+        reasons.append("R03: self-review (reviewer equals author).")
+
+    # R02: Gold must come from the same Silver version
+    sv = draft.get("silver_version")
+    gsv = draft.get("gold_source_silver_version")
+    if sv is None or gsv is None:
+        reasons.append("R02: silver_version or gold_source_silver_version is missing.")
+    elif sv != gsv:
+        reasons.append(f"R02: version mismatch (silver={sv}, gold_source_silver={gsv}).")
+
+    # R05: generating-code hash
+    if not draft.get("code_sha256"):
+        reasons.append("R05: code_sha256 is missing.")
+    elif draft.get("code_sha256") != expected.get("code_sha256"):
+        reasons.append("R05: generating-code hash mismatch.")
+
+    # Remaining bindings must equal the expected pinned values
+    for k in ("handoff_logical_sha256", "silver_path", "silver_version",
+              "gold_path", "gold_version", "gold_source_silver_version"):
+        if k not in draft:
+            reasons.append(f"BIND: missing key {k}.")
+        elif draft[k] != expected.get(k):
+            reasons.append(f"BIND: {k} differs from the pinned value.")
+
+    if reasons:
+        return False, reasons
+    return True, ["R01: release binding validated."]

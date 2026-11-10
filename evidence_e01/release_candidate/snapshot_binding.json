@@ -1,0 +1,23 @@
+{
+  "release_id": "lab3-g01-attempt-e01",
+  "author": "Thanh Dat",
+  "reviewer": "Xuan Dao",
+  "steward": "Xuan Tien",
+  "handoff_logical_sha256": "c50f8252bfb91890975d26b16fe1d2b32f0e283a58e46bd16260b4a3cca0bf0d",
+  "handoff_kind": "course_fallback_not_student_approval",
+  "trusted_manifest_sha256": "3cdfc84b26d290100b39ce65d4ff7cb22839f4021b9caf26897c8a4ff68091a2",
+  "code_sha256": "6d4c36d0275262fbf10357da3f1225af5e77eca8a8eab8017248432ce160a92d",
+  "silver_path": "/tmp/lab3-lakehouse/g01/attempt-e01/tables/silver",
+  "silver_version": 1,
+  "gold_path": "/tmp/lab3-lakehouse/g01/attempt-e01/tables/gold",
+  "gold_version": 1,
+  "gold_source_silver_version": 1,
+  "as_of": "2026-02-09T00:00:00Z",
+  "timezone": "UTC",
+  "known_limitations": [
+    "Synthetic fixture only.",
+    "Inherited QA sample disagreements are not repaired.",
+    "A version tuple is a release protocol, not a cross-table transaction."
+  ],
+  "release_validator_sha256": "98d36b0b4438da557d5ec00feeed9be2d99bb988edeb4f3df3b308cdfecc287e"
+}
