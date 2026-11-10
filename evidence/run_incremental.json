@@ -1,12 +1,12 @@
 {
-  "run_id": "e0c013ef-6bd3-44ad-ae08-d65a8904e269",
+  "run_id": "874bfdbb-03fd-4360-b7cc-f8b8a2f56d0e",
   "job": "incremental",
   "status": "COMPLETE",
   "input_manifest_sha256": "3cdfc84b26d290100b39ce65d4ff7cb22839f4021b9caf26897c8a4ff68091a2",
-  "implementation_sha256": "e40f3b610818f53213bddb43c51972eab3c7f18a08328e7e2b2848c8f758b7d9",
-  "scaffold_sha256": "2a0315fce330858e9b641d1873d069413fcf635629a0b151161dfe22817d4e3a",
+  "implementation_sha256": "6d4c36d0275262fbf10357da3f1225af5e77eca8a8eab8017248432ce160a92d",
+  "scaffold_sha256": "651eaefb53707d8553b0ccfa7a7a0640504699c7584e02ffb46583713d1d6ef0",
   "outputs": [
-    "/tmp/lab3-lakehouse/g01/attempt-c02/tables/silver@1",
-    "/tmp/lab3-lakehouse/g01/attempt-c02/tables/gold@1"
+    "/tmp/lab3-lakehouse/g01/attempt-e01/tables/silver@1",
+    "/tmp/lab3-lakehouse/g01/attempt-e01/tables/gold@1"
   ]
 }

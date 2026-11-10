@@ -1,11 +1,11 @@
 {
-  "python": "3.11.18",
+  "python": "3.14.4",
   "spark": "4.0.1",
   "delta_spark": "4.0.1",
   "java": "17.0.20.1",
   "hadoop": "3.4.1",
   "spark_master": "local[2]",
-  "application_id": "local-1794226064151",
+  "application_id": "local-1794321916842",
   "timezone": "UTC",
   "aqe": "true",
   "shuffle_partitions": "8",
