@@ -1,13 +1,13 @@
 {
-  "run_id": "cd728964-dfbb-4ef5-8e21-a24afffce993",
+  "run_id": "e7b2c027-b3f4-4a47-9676-54c6c6bb4caf",
   "job": "bootstrap",
   "status": "COMPLETE",
   "input_manifest_sha256": "3cdfc84b26d290100b39ce65d4ff7cb22839f4021b9caf26897c8a4ff68091a2",
-  "implementation_sha256": "dcf0908ef422a0b7ad6d8d724fe8b76b2843e594f64676122f76d3d51b5a05fe",
-  "scaffold_sha256": "4f4ebc6f6ff32a6c2e5450b4e3219291ae8f92b46b3fae2b357883567646267c",
+  "implementation_sha256": "e40f3b610818f53213bddb43c51972eab3c7f18a08328e7e2b2848c8f758b7d9",
+  "scaffold_sha256": "2a0315fce330858e9b641d1873d069413fcf635629a0b151161dfe22817d4e3a",
   "outputs": [
-    "/tmp/lab3-lakehouse/g01/attempt01/tables/bronze",
-    "/tmp/lab3-lakehouse/g01/attempt01/tables/silver",
-    "/tmp/lab3-lakehouse/g01/attempt01/tables/gold"
+    "/tmp/lab3-lakehouse/g01/attempt-c02/tables/bronze",
+    "/tmp/lab3-lakehouse/g01/attempt-c02/tables/silver",
+    "/tmp/lab3-lakehouse/g01/attempt-c02/tables/gold"
   ]
 }
