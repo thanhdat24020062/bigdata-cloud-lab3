@@ -1,0 +1,7 @@
+{
+  "run_id": "6a41e5bb-3c7f-4124-8185-ae96f8f0603d",
+  "job": "release",
+  "status": "ABORT",
+  "error_type": "ContractError",
+  "message": "RELEASE_GATE_TESTS"
+}
