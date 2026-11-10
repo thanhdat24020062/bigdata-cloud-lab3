@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "delta_smoke_path": "/tmp/lab3-lakehouse/g01/role-a-preflight-01/preflight-bcc94b3f-bd52-468c-b8dc-d79f28b0ca7d",
+  "fixture_rows": 9610,
+  "new_batch_rows": 140,
+  "implementation_file": "student_impl.py"
+}
