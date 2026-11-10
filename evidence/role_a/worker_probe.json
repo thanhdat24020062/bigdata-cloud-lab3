@@ -1,0 +1,126 @@
+{
+  "partition_tasks": [
+    {
+      "host": "MSI",
+      "pid": 9918,
+      "partition": 0
+    },
+    {
+      "host": "MSI",
+      "pid": 9919,
+      "partition": 1
+    },
+    {
+      "host": "MSI",
+      "pid": 9918,
+      "partition": 2
+    },
+    {
+      "host": "MSI",
+      "pid": 9919,
+      "partition": 3
+    },
+    {
+      "host": "MSI",
+      "pid": 9918,
+      "partition": 4
+    },
+    {
+      "host": "MSI",
+      "pid": 9919,
+      "partition": 5
+    },
+    {
+      "host": "MSI",
+      "pid": 9918,
+      "partition": 6
+    },
+    {
+      "host": "MSI",
+      "pid": 9919,
+      "partition": 7
+    },
+    {
+      "host": "MSI",
+      "pid": 9918,
+      "partition": 8
+    },
+    {
+      "host": "MSI",
+      "pid": 9919,
+      "partition": 9
+    },
+    {
+      "host": "MSI",
+      "pid": 9918,
+      "partition": 10
+    },
+    {
+      "host": "MSI",
+      "pid": 9919,
+      "partition": 11
+    },
+    {
+      "host": "MSI",
+      "pid": 9919,
+      "partition": 12
+    },
+    {
+      "host": "MSI",
+      "pid": 9918,
+      "partition": 13
+    },
+    {
+      "host": "MSI",
+      "pid": 9918,
+      "partition": 14
+    },
+    {
+      "host": "MSI",
+      "pid": 9919,
+      "partition": 15
+    },
+    {
+      "host": "MSI",
+      "pid": 9919,
+      "partition": 16
+    },
+    {
+      "host": "MSI",
+      "pid": 9918,
+      "partition": 17
+    },
+    {
+      "host": "MSI",
+      "pid": 9918,
+      "partition": 18
+    },
+    {
+      "host": "MSI",
+      "pid": 9919,
+      "partition": 19
+    },
+    {
+      "host": "MSI",
+      "pid": 9918,
+      "partition": 20
+    },
+    {
+      "host": "MSI",
+      "pid": 9919,
+      "partition": 21
+    },
+    {
+      "host": "MSI",
+      "pid": 9918,
+      "partition": 22
+    },
+    {
+      "host": "MSI",
+      "pid": 9919,
+      "partition": 23
+    }
+  ],
+  "distinct_hosts": 1,
+  "interpretation": "Distinct hosts demonstrate placements, not distinct physical servers. Keep Spark UI/event-log evidence too."
+}
