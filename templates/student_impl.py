@@ -69,7 +69,7 @@ def benchmark_query(df):
 def validate_release_binding(draft, expected):
     """TODO 5 (T5, role E). Signature restored to the starter's (draft, expected)."""
     if not draft:
-        return False
+        return False, ["Draft is empty"]
 
     author = draft.get("author")
     reviewer = draft.get("reviewer")
@@ -77,13 +77,11 @@ def validate_release_binding(draft, expected):
     
     # R04: Missing steward rejects
     if not steward or str(steward).strip() == "":
-        print("[Gate Refusal] R04: Steward identity is missing.")
-        return False
+        return False, ["R04: Steward identity is missing."]
 
     # R03: Self-review rejects (author == reviewer)
     if not author or not reviewer or author == reviewer:
-        print("[Gate Refusal] R03: Self-review detected (Author equals Reviewer).")
-        return False
+        return False, ["R03: Self-review detected (Author equals Reviewer)."]
 
     snapshot_binding = draft.get("snapshot_binding", {})
     silver_version = snapshot_binding.get("silver_version")
@@ -91,18 +89,14 @@ def validate_release_binding(draft, expected):
 
     # R02: Mismatched Gold-source / Silver version rejects
     if silver_version is None or gold_source_silver_version is None or silver_version != gold_source_silver_version:
-        print("[Gate Refusal] R02: Version mismatch between Silver and Gold source.")
-        return False
+        return False, [f"R02: Version mismatch. Silver: {silver_version}, Gold source: {gold_source_silver_version}"]
 
-    # Xử lý lấy mã hash kỳ vọng (từ expected) và thực tế (từ draft)
     expected_hash = expected.get("code_hash") if isinstance(expected, dict) else expected
     actual_hash = draft.get("code_hash")
 
     # R05: Wrong generating-code hash rejects
     if not expected_hash or not actual_hash or expected_hash != actual_hash:
-        print("[Gate Refusal] R05: Generating-code hash mismatch.")
-        return False
+        return False, ["R05: Generating-code hash mismatch."]
 
     # R01: Valid binding pass
-    print("[Gate Pass] R01: Release binding validated successfully.")
-    return True
+    return True, ["R01: Release binding validated successfully."]
