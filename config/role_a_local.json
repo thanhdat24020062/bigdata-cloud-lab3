@@ -1,0 +1,11 @@
+{
+  "group_id": "g01",
+  "run_label": "role-a-preflight-01",
+  "store_id": "local-course-fixture",
+  "spark_master": "local[2]",
+  "lakehouse_root": "/tmp/lab3-lakehouse",
+  "evidence_dir": "evidence/role_a",
+  "shuffle_partitions": 8,
+  "benchmark_copies": 100,
+  "extra_maven_packages": []
+}
