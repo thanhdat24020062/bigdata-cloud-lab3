@@ -1,0 +1,2 @@
+role,target_role,check_item,status,evidence_file,notes
+Role B,Role C,Task 3 Stale/Tied Revision Merge,PASS,evidence/incremental.json,Verified incoming_winners=130 and winner_reordering_passed=True. Stale revisions correctly ignored and tie ordering preserved.
