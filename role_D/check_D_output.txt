@@ -1,0 +1,37 @@
+== Silver / Gold (role B cross-check)
+PASS  Silver has 9710 rows, unique record_id
+PASS  Gold after batch02: every group and field equals independent recomputation
+PASS  SUM(Gold.n_observations) == Silver rows
+PASS  SUM(Gold.sum_temperature_c) == Silver total
+== Q1 / Q2 / Q3
+PASS  Q1 rows equal recomputation (n, mean, n_late, late_rate)
+PASS  Q3 rows equal recomputation (n, n_above_25, rate)
+PASS  Q2 weighted mean and naive mean equal recomputation
+== Benchmark
+PASS  benchmark query_result equals independent recomputation x100
+PASS  expanded_rows == source_rows x 100 and source_rows == Silver rows
+PASS  six measurements, order A-B, B-A, A-B, all result_equal
+PASS  recomputed medians and A/B ratio equal the report
+PASS  layout A unpartitioned/32 files; layout B partitioned by event_date/5 files
+PASS  plan_B has PartitionFilters on event_date = 2026-02-06
+PASS  plan_A has no PartitionFilters line
+PASS  benchmark source Silver version == state.silver_final_version, Gold bound to same Silver version
+== Code, lineage, files, secrets
+PASS  sha256(student_impl.py) == benchmark implementation_sha256
+PASS  that code is archived in evidence/code_versions/
+PASS  run_benchmark.json status COMPLETE
+INFO  benchmark lineage events: ['START', 'ABORT', 'START', 'COMPLETE']
+PASS  lineage has START and a terminal event for every benchmark run (incl. the aborted first attempt)
+PASS  exists: Q1_site_day.json
+PASS  exists: Q2_weighted_day.json
+PASS  exists: Q3_above25_rate.json
+PASS  exists: daily_mean.png
+PASS  exists: late_fraction.png
+PASS  exists: plan_A.txt
+PASS  exists: plan_B.txt
+PASS  exists: benchmark_report.json
+PASS  exists: run_benchmark_error.json
+PASS  exists: runtime_benchmark.json
+PASS  no private key / operator_email / secret strings in evidence text files
+
+OVERALL: ALL CHECKS PASSED
